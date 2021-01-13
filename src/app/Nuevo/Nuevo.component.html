@@ -1,0 +1,14 @@
+<ActionBar>
+
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Featured"></Label>
+</ActionBar>
+
+<GridLayout class="page__content">
+    <Label class="page__content-icon fas" text="&#xf005;"></Label>
+    <Label class="page__content-placeholder" *ngFor="let s of this.noticias.buscar()" [text]="s"></Label>
+</GridLayout>
